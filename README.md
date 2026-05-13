@@ -1,16 +1,18 @@
-# React + Vite
+# Burning Pages
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple app in delevopment.
 
-Currently, two official plugins are available:
+Currently, as soon as you write the page disappears. I'll be adding some more time to be able to write.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Why burning pages
 
-## React Compiler
+I just hoped it would be a cathartic way of letting go. You write anything, like something you want to forget, and it just gone.
+I got the idea from my mind palace, yes like Sherlock's mind palace. I have this black hole and anything that's hurting me, anything I would like to forget goes into it and never comes out. Sometimes writing helps, too.
+Hope you find it helpful.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It's open to suggestions. I'll be adding more new designs to it.
 
-## Expanding the ESLint configuration
+♥
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
