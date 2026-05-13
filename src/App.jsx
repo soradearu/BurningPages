@@ -53,7 +53,7 @@ export default function App() {
 
     timerRef.current = setTimeout(() => {
       startBurn()
-    }, 3000) // starts burning after pause
+    }, 4000) // starts burning after pause
   }
 
   return (
