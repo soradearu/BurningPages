@@ -88,8 +88,8 @@ textarea::placeholder {
   background: linear-gradient(
     to right,
     rgba(74, 0, 94, 0.95),
-    rgba(136, 77, 219, 0.8),
-    rgba(105, 212, 205, 0.3),
+    rgba(47, 26, 152, 0.8),
+    rgba(83, 125, 142, 0.3),
     transparent
   );
 
