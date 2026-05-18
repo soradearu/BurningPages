@@ -59,6 +59,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="topbar">
+        
         <h1>Burning Pages</h1>
       </div>
 

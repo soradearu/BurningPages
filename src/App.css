@@ -21,6 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  color:#e2c9c9
 }
 
 h1 {
@@ -87,9 +88,9 @@ textarea::placeholder {
 
   background: linear-gradient(
     to right,
-    rgba(74, 0, 94, 0.95),
-    rgba(47, 26, 152, 0.8),
-    rgba(83, 125, 142, 0.3),
+    rgba(76, 15, 93, 0.95),
+    rgba(50, 18, 208, 0.8),
+    rgba(53, 75, 213, 0.3),
     transparent
   );
 
