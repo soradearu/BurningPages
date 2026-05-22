@@ -19,42 +19,53 @@ export default function App() {
     })
   }
 
-  const startBurn = () => {
-    if (intervalRef.current) return
+ const startBurn = () => {
+  if (intervalRef.current) return
 
-    intervalRef.current = setInterval(() => {
-      setNote((prev) => {
-        const next = prev.burn + 4
+  intervalRef.current = setInterval(() => {
+    setNote((prev) => {
+      let decay = 2 // slower base burn 
 
-        if (next >= 100) {
-          clearInterval(intervalRef.current)
-          intervalRef.current = null
+      const next = prev.burn + decay
 
-          setTimeout(() => {
-            resetNote()
-          }, 400)
+      if (next >= 100) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
 
-          return { ...prev, burn: 100 }
-        }
+        setEcho?.(prev.text)
 
-        return { ...prev, burn: next }
-      })
-    }, 60)
+        setTimeout(() => {
+          resetNote()
+          setEcho?.(null)
+        }, 1500)
+
+        return { ...prev, burn: 100 }
+      }
+
+      return { ...prev, burn: next }
+    })
+  }, 70)
+}
+const handleChange = (value) => {
+  setNote((prev) => ({
+    ...prev,
+    text: value,
+  }))
+
+  // always cancel pending burn start
+  if (timerRef.current) clearTimeout(timerRef.current)
+
+  // burn resistance: stop mid burn when user types
+  if (intervalRef.current) {
+    clearInterval(intervalRef.current)
+    intervalRef.current = null
   }
 
-  const handleChange = (value) => {
-    setNote((prev) => ({
-      ...prev,
-      text: value,
-    }))
-
-    // reset typing timer
-    if (timerRef.current) clearTimeout(timerRef.current)
-
-    timerRef.current = setTimeout(() => {
-      startBurn()
-    }, 4000) // starts burning after pause
-  }
+  // restart safe timer
+  timerRef.current = setTimeout(() => {
+    startBurn()
+  }, 2000)
+}
 
   return (
     <div className="app">
